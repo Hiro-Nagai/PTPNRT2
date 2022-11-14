@@ -1,0 +1,123 @@
+<div class="container">
+  <div class="dvise_frame">
+    <h2 class="text-center mb-4">ログイン</h2>
+    <div class="devise_inner">
+      <%= form_for(resource, as: resource_name, url: session_path(resource_name)) do |f| %>
+        <div class="field mb-3 w-100 row ml-0 mr-0">
+          <div class="col-2"><span class="badge badge-danger">必須</span></div>  
+          <%= f.email_field :email, autofocus: true, autocomplete: "email",placeholder:"メールアドレス",class:"col-10 form-control"%>
+        </div>
+
+        <div class="field mb-3 w-100 row ml-0 mr-0">
+          <div class="col-2"><span class="badge badge-danger">必須</span></div>  
+          <%= f.password_field :password, autocomplete: "current-password" ,placeholder:"パスワード",class:"col-10 form-control"%>
+        </div>
+
+        <div class="actions mb-1 w-100 row ml-0 mr-0" >
+          <%= f.submit "ログイン", class:" p-2 m-1 btn-outline-primary text-white bg-primary rounded-pill col-12 form-control" %>
+        </div>
+        <div class="text-center" >
+          <%= link_to"新しいアカウントを作成","/users/sign_up",class:"text-primary sign_in_link"%>
+        </div>
+      <% end %>
+    </div>
+  </div>
+</div>
+
+
+
+
+
+
+
+
+<!--
+<%= form_for(resource, as: resource_name, url: registration_path(resource_name)) do |f| %>
+
+      <div class="container device">
+      <div class="device_frame">
+
+
+        <p class="my-4">ログイン</p>
+
+
+        <div class="device_inner">
+         
+          <form class="new_user" id="new_user" action="/users/sign_in" accept-charset="UTF-8" method="post" data-dashlane-rid="2808d6fbbee16518" data-form-type="login"><input type="hidden" name="authenticity_token" value="+Wph0R2hz26c9wl0Z2BuHqC5iMJl1+qlIZzO650v1BvWuEk2xpuBsTpAbQBH9Jzf0kgQDZUJThVGcWCTUJyupg==">
+            
+            <div class="field mb-3 w-100 row ml-0 mr-0">
+              <div class="col-2"><span class="badge badge-danger">必須</span></div>  
+              <%= f.email_field :email, autofocus: true, autocomplete: "email",placeholder:"メールアドレス",class:"col-10 form-control"%>
+            </div>
+            
+            <div class="field form-row">
+              <div class="col-2 required-b pt-2"></div>
+              <div class="col-2"><span class="badge badge-danger">必須</span></div>
+              <%= f.email_field :email, autofocus: true, autocomplete: "email", placeholder: "メールアドレス" %> 
+              <input autocomplete="email" class="form-control col-10 px-2" placeholder="メールアドレス" type="email" value="" name="user[email]" id="user_email" data-dashlane-rid="02902b7713c62a3f" data-kwimpalastatus="alive" data-kwimpalaid="1668096939314-0" data-form-type="email">
+            
+            </div>
+
+
+
+            <div class="field form-row">
+              <div class="col-2 required-b pt-2"></div>
+              <div class="col-2"><span class="badge badge-danger">必須</span></div> 
+              <input autocomplete="current-password" class="form-control col-10 px-2" placeholder="パスワード" type="password" name="user[password]" id="user_password" data-dashlane-rid="54c113c4d9b41966" data-kwimpalastatus="alive" data-kwimpalaid="1668096939314-1" data-form-type="password">
+            
+            </div>
+
+
+            <div class="actions">
+              <input type="submit" name="commit" value="ログイン" class="form-control btn-primary my-4 " data-disable-with="ログイン" data-dashlane-rid="53166cb5e99674c9" data-kwimpalastatus="dead" data-form-type="action,login">
+            </div>
+          </form>      
+
+          <a href="/users/sign_up">新しいアカウントを作成</a><br>
+
+        </div>
+      </div>
+    </div>
+
+
+<% end %>
+
+
+
+
+
+
+
+
+<%= form_for(resource, as: resource_name, url: registration_path(resource_name)) do |f| %>
+
+  <%= render "users/shared/error_messages", resource: resource %>
+      
+      <div class="container device">
+        <div class="device_frame">
+          <p class="my-4">ログイン</p>
+
+          <div class="field"> 
+          <div class="col-2"><span class="badge badge-danger">必須</span></div> 
+            <%= f.email_field :email, placeholder: "メールアドレス", autofocus: true, autocomplete: "email" %>
+            <div class="col-2 required-b pt-2">
+            </div>
+          </div>
+
+          <div class="field">
+          <div class="col-2"><span class="badge badge-danger">必須</span></div> 
+            <%= f.password_field :password, placeholder: "パスワード", autocomplete: "new-password" %>
+          </div>
+
+          <div class="actions">
+            <div class="form-control btn-primary my-4"><%= f.submit "ログイン" %></div>
+          </div>
+          
+          <a href="/users/sign_up">新しいアカウントを作成</a>
+        </div>
+      </div>
+<% end %>
+
+
+
+

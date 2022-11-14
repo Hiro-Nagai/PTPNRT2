@@ -1,6 +1,19 @@
 source "https://rubygems.org"
 git_source(:github) { |repo| "https://github.com/#{repo}.git" }
 
+gem 'devise'
+gem 'devise-i18n'
+gem 'devise-i18n-views'
+
+gem 'bootstrap', '~> 4.3.1'
+gem 'jquery-rails'
+gem 'pry-rails'
+gem 'mini_magick'
+gem 'image_processing'
+
+gem "font-awesome-sass", "~> 6.1.2"
+
+
 ruby "3.0.4"
 
 # Bundle edge Rails instead: gem "rails", github: "rails/rails", branch: "main"
